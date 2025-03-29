@@ -1,0 +1,26 @@
+name: '[Updating markdown files]'
+
+on:
+  # Allows for manual runs of workflow
+  workflow_dispatch:
+  
+  # Trigger on push to main branch when files in 'my-submissions' change
+  push:
+    branches:
+      - main
+    paths:
+      - 'my-submissions/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call and run markdown generator
+        uses: Zanger67/WikiLeet@main
+        with:
+          # Replace with your actual LeetCode username!
+          username: thanhhieu
