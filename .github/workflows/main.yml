@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Call and run markdown generator
-        uses: Zanger67/WikiLeet@main
+        uses: ThanhHieu2004/WikiLeet@main
         with:
           # Replace with your actual LeetCode username!
           username: thanhhieu
